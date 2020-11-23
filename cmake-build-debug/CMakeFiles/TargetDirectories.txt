@@ -1,0 +1,3 @@
+C:/factorial/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/factorial/cmake-build-debug/CMakeFiles/factorial.dir
+C:/factorial/cmake-build-debug/CMakeFiles/rebuild_cache.dir
