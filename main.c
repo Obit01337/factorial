@@ -2,48 +2,49 @@
 // Enter the value n and calculate n!
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int check();
-int factorial(int number);
-int LucikEdition(int number);
+int check_correct_input(void);
+int factorial(int num);
+int LucikEdition(int num);
 
-int main()
+int main(void)
 {
     // Input number
-    puts("Enter your number to count");
-    int number = check();
-    printf_s("%d! = %d\n", number, factorial(number));
-    printf_s("%d! = %d\n", number, LucikEdition(number));
-    getchar();
+    puts("Enter your number to count (less than 13)");
+    int num = check_correct_input();
+    printf_s("%d! = %d\n", num, factorial(num));
+    printf_s("%d! = %d\n", num, LucikEdition(num));
+    system("pause");
     return 0;
 }
 
-// Function for correct input
-int check()
+// Function for correct input 8626
+int check_correct_input(void)
 {
-    int number;
-    char check;
+    int num;
+    char enter;
     do
     {
         rewind(stdin);
         puts("Input\t");
-    }while ( !(scanf_s("%d%c", &number, &check)) || check != '\n' || number < 0);
-    return number;
+    }while (!(scanf_s("%d%c", &num, &enter)) || enter != '\n' || num < 0 || num > 12);
+    return num;
 }
 
 // My algorithm for calculating the factorial
-int factorial(int number)
+int factorial(int num)
 {
-    if (number == 0) return 1;
-    else factorial(number-1);
-    static int result = 1;
-    result *= number;
-    return result;
+    if (num == 0) return 1;
+    factorial(num - 1);
+    static int res = 1;
+    res *= num;
+    return res;
 }
 
 // Copy of Lucik function
-int LucikEdition(int number)
+int LucikEdition(int num)
 {
-   return number?number*LucikEdition(number-1):1;
+   return num ? num * LucikEdition(num - 1) : 1;
 }
 

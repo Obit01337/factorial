@@ -9,4 +9,6 @@
 C:/factorial/main.c
 stdio.h
 -
+stdlib.h
+-
 
