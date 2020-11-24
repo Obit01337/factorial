@@ -1,4 +1,4 @@
-//TASK:
+// TASK:
 // Enter the value n and calculate n!
 
 #include <stdio.h>
@@ -19,7 +19,7 @@ int main(void)
     return 0;
 }
 
-// Function for correct input 8626
+// Function for correct input
 int check_correct_input(void)
 {
     int num;
