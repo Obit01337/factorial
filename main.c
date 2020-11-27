@@ -27,7 +27,7 @@ int check_correct_input(void)
     do
     {
         rewind(stdin);
-        puts("Input\t");
+        puts("Input");
     }while (!(scanf_s("%d%c", &num, &enter)) || enter != '\n' || num < 0 || num > 12);
     return num;
 }
